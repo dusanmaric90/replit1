@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     
-    // View switching functions
-    const showPostsView = () => {
+    // View switching functions - making them global
+    window.showPostsView = () => {
         postsContainer.classList.remove('d-none');
         postDetailContainer.classList.add('d-none');
         postFormContainer.classList.add('d-none');
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setActiveNavLink(homeLink);
     };
     
-    const showPostDetailView = (postId) => {
+    window.showPostDetailView = (postId) => {
         postsContainer.classList.add('d-none');
         postDetailContainer.classList.remove('d-none');
         postFormContainer.classList.add('d-none');
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setActiveNavLink(homeLink);
     };
     
-    const showCreatePostView = () => {
+    window.showCreatePostView = () => {
         postsContainer.classList.add('d-none');
         postDetailContainer.classList.add('d-none');
         postFormContainer.classList.remove('d-none');
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setActiveNavLink(createPostLink);
     };
     
-    const showEditPostView = (post) => {
+    window.showEditPostView = (post) => {
         postsContainer.classList.add('d-none');
         postDetailContainer.classList.add('d-none');
         postFormContainer.classList.remove('d-none');
@@ -118,8 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
         activeLink.classList.add('active');
     };
     
-    // Error handling
-    const showError = (message) => {
+    // Error handling - make it global
+    window.showError = (message) => {
         document.getElementById('error-message').textContent = message;
         errorToast.show();
     };
