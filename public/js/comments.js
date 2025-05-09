@@ -98,8 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     throw new Error(`HTTP error ${response.status}: ${await response.text()}`);
                 }
                 
-                // Reset form
-                document.getElementById('comment-content').value = '';
+                // Reset the entire form
+                commentForm.reset();
                 
                 // Reload comments
                 loadPostDetails(postId);
