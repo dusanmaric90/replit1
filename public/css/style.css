@@ -1,3 +1,8 @@
+/* Custom colors */
+.bg-pink {
+    background-color: #ff69b4 !important;
+}
+
 /* General styles */
 body {
     min-height: 100vh;
